@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @font-face {
+            src: url(Fonts/Prisma.ttf);
+            font-family: ManchesterUnited;
+        }
+        @font-face {
+            src: url(Fonts/GoodTime.ttf);
+            font-family: NamDaoGoodTime;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            font-family: ManchesterUnited;
+            font-weight: 500;
+        }
+        
+        h2{
+            font-family: ManchesterUnited;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        hr {
+            display: block;
+            border-width: 1px;
+            border-style: inset;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+/* Grid Area */ 
+        .item1 {grid-area: bottom;}
+        .item2 {grid-area: screen;}
+        .item3 {grid-area: top;}
+        .item4 {grid-area: text;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                'bottom screen top text'
+
+        }
+
+        .grid-container > div {
+            text-align: center;
+        }
+        
+/* Grid Area */
+        
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+        .nav {
+            background-color: white;
+            list-style-type: none;
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            margin: 0px;
+            width: 100%;
+            border: solid 1px black;
+            margin-right: -1px;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+
+        .nav li {
+            float: right;
+            margin-right: -1px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-family: NamDaoGoodTime;
+            padding: 33px 40px;
+            background-color: white;
+            font-size: 20px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.7s;
+            cursor: pointer;
+        }
+
+        .nav a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav a.active {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+/* Stylesheet for Vertical Navigation Bar */
+        
+        .nav1 {
+            background-color: white;
+            top: 108px;
+            padding: 0px;
+            list-style-type: none;
+            text-align: center;
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            left: 0px;
+            overflow: auto;
+            border: solid 1px black;
+            margin-left: -1px;
+        }
+
+        .nav1 li {
+            border: solid 1px black;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            font-size: 15px;
+            display: block;
+            padding: 30px 50px;
+            background-color: white;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+        
+        .nav1 a:hover {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Vertical Navigation Bar */
+        
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+        .nav2 {
+            background-color: white;
+            list-style-type: none;	
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            top: 75px;
+            width: 100%;
+        }
+
+        .nav2 li {
+            float: left;
+            border: solid 1px black;
+            margin-top: -1px;
+            margin-right: -1px;
+            margin-left: -1px;
+  
+        }
+
+        .nav2 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            display: block;
+            padding: 10px 179px;
+            background-color: white;
+            font-size: 15px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .nav2 a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav2 a.active {
+            background-color: darkgrey;
+            color: black;
+        }
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+        .boxexpand{
+            display: block;
+            width: 200px;
+            height: 300px;
+            box-shadow: 0px 10px 20px 10px grey;
+            transition: transform .2s;
+        }
+        
+        .boxexpand:hover{
+            background-color: white;
+            color: black;
+            -ms-transform: scale(1.1);
+            -webkit-transform: scale (1.1);
+            transform: scale(1.1);
+            z-index: auto;
+        }
+        
+        .boxAlexFerguson{
+            background-color: beige;
+            width: 700px;
+            height: 400px;
+            box-shadow: 0px 10px 20px 10px grey;
+            transition: transform .2s;
+            margin-left: 80px;
+        }
+        
+        .boxAlexFerguson:hover{
+            background-color: white;
+            color: black;
+            -ms-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        
+        .right {
+            margin-right: 100px;
+        }
+    
+        .left{
+            margin-left: 100px;
+        }
+        
+    </style>
+    
+    <script>
+        function scrollToHash (trainingballs)
+        {
+            location.hash = "#" + trainingballs;
+        }
+        
+        function scrollToHash (shinguards)
+        {
+            location.hash = "#" + shinguards;
+        }
+        
+        function scrollToHash (gum)
+        {
+            location.hash = "#" + gum;
+        }
+    </script>
+</head>
+
+<body>
+        
+        <div>
+            
+                                                <!-- Vertical Navigation Bar -->
+            
+            <ul class="nav1">
+                <li><a href="#trainingballs">Training Balls</a></li>
+                <li><a href="#shinguards">Shin Guards</a></li>
+                <li><a href="#gum">Sir Alex's Gum</a></li>
+            </ul>
+            
+                                                <!-- Vertical Navigation Bar -->
+        </div>
+        
+        <div>
+
+                                                <!-- Horizontal Navigation Bar -->
+            
+            <ul class="nav">
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
+                    <ul>          
+                        <li><h1 class="fontsize"> Manchester United </h1></li>           
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
+                        </li>    
+                    </ul>
+                </li>
+                <li><a href="AboutContributions.html">About</a></li>
+                <li><a href="RegistrationForm.html">Registration</a></li>
+                <li><a class="active" href="ProductsAbout.html">Products</a></li>
+                <li><a href="IntroductionOriginOfTheClub.html">Introduction</a></li>
+            </ul>
+            
+            <ul class="nav2">    
+                <li><a href="ProductsAbout.html">About</a></li>
+                <li><a href="ProductsKits.html">Season Kits</a></li>
+                <li><a class="active" href="ProductsUtilities.html">Utilities</a></li>
+            </ul>
+
+                                                <!-- Horizontal Navigation Bar -->
+            
+        </div> 
+        
+        <div>
+            <div style="margin-left:20%; padding: 210px 60px; height: auto;">
+                <div style="background-color: white; color: black; padding:40px 50px;">
+                    <h1 style="font-size: 50px;"> Utilities </h1>
+                    <div id="trainingballs"></div>
+                    <hr>
+                    <br>
+                    <br>
+                                    
+                                                <!-- Training Balls -->
+                    <h2 style="letter-spacing: 1.5px"> Training Balls </h2>
+                        <br>
+                        <br>
+                    <div class = "grid-container">
+    
+                        <div class="item1 right">
+                            <div class="boxexpand">
+                                <img src="Images/Utilities/ManchesterUnitedBall.jfif" alt="MUBall"
+                                     style="width: auto; height: 180px; margin-top: 10px;">
+                                <p style="font-family: NamDaoGoodTime; text-align: center; font-size: 13px;"> 
+                                    $60  
+                                    <br>
+                                    <br>
+                                    Manchester United Training Ball 1
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                                                
+                        <div class="item2">
+                            <div class="boxexpand">
+                                <img src="Images/Utilities/MUBall1.jpg" alt="MUBall"
+                                    style="width: auto; height: 180px; margin-top: 10px;">
+                                <p style="font-family: NamDaoGoodTime; text-align: center; font-size: 13px;"> 
+                                    $60  
+                                    <br>
+                                    <br>
+                                    Manchester United Training Ball 2
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="item3 left">
+                            <div class="boxexpand">
+                                <img src="Images/Utilities/MUBall2.jfif" alt="MUBall"
+                                    style="width: auto; height: 180px; margin-top: 10px;">
+                                <p style="font-family: NamDaoGoodTime; text-align: center; font-size: 13px;"> 
+                                    $60  
+                                    <br> 
+                                    <br>
+                                    Manchester United Training Ball 3
+                                </p>
+                            </div>
+                        </div>         
+                    </div>
+                    <div id="shinguards"></div>
+                    <br>
+                    <br>
+                    <hr>
+                                                <!-- Training Balls -->
+                                                <!-- Shin Guards -->
+                    <h2 style="letter-spacing: 1.5px;"> Shin Guards </h2>
+                        <br>
+                        <br>
+                    <div class = "grid-container">
+    
+                        <div class="item1 right">
+                            <div class="boxexpand">
+                                <img src="Images/Utilities/MUShinGuards.jfif" alt="MUShinGuards"
+                                     style="width: auto; height: 180px; margin-top: 10px;">
+                                <p style="font-family: NamDaoGoodTime; text-align: center; font-size: 13px;"> 
+                                    $100 
+                                    <br>
+                                    <br>
+                                    Manchester United Shin Guards Pro
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                                                
+                        <div class="item2">
+                            <div class="boxexpand">
+                                <img src="Images/Utilities/MUShinGuards1.webp" alt="MUShinGuards"
+                                    style="width: auto; height: 180px; margin-top: 10px;">
+                                <p style="font-family: NamDaoGoodTime; text-align: center; font-size: 13px;"> 
+                                    $80  
+                                    <br> 
+                                    <br>
+                                    Manchester United Shin Guards Semi-Pro
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="item3 left">
+                            <div class="boxexpand">
+                                <img src="Images/Utilities/MUShinGuards2.jpeg" alt="MUShinGuards"
+                                    style="width: 180px; height: 180px; margin-top: 10px;">
+                                <p style="font-family: NamDaoGoodTime; text-align: center; font-size: 13px;"> 
+                                    $60  
+                                    <br>
+                                    <br> 
+                                    Manchester United Shin Guards Amatuer
+                                </p>
+                            </div>
+                        </div>         
+                    </div>
+                    <div id="gum"></div>
+                    <br>
+                    <br>
+                    <hr>
+                                                    <!-- Shin Guards-->
+                    
+                                                <!-- Sir Alex Ferguson's Gum -->
+                    <h2 style="letter-spacing: 1.5px;"> Sir Alex Ferguson's Gum </h2>
+                        <br>
+                        <br>
+                    <div class = "grid-container">
+    
+                        <div class="item1 right">
+                            <div class="boxAlexFerguson">
+                                <img src="Images/Utilities/MUFergusonGum.jpg" alt="MUFergusonsGum"
+                                     style="width: 700px; height: 300px;">
+                                <p style="font-family: NamDaoGoodTime; text-align: center; font-size: 20px;"> 
+                                    $6000  
+                                    <br> 
+                                    
+                                    Sir Alex Ferguson's Gum
+                                </p>
+                            
+                        </div>         
+                    </div>
+                    <br>
+                    <br>
+                    </div>
+                    <br>
+                    <br>
+                                                <!-- Sir Alex Ferguson's Gum -->
+                    <hr>
+                </div>    
+            </div>
+        </div>
+    
+    <h3 style="margin-left: 52%; font-size: 15px; color:white;">
+                <b>Design by Nam Dao and Vignesh</b>
+    </h3>
+
+</body>
+</html>

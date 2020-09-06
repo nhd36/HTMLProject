@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @font-face {
+            src: url(Fonts/Prisma.ttf);
+            font-family: ManchesterUnited;
+        }
+        
+        @font-face {
+            src: url(Fonts/GoodTime.ttf);
+            font-family: NamDaoGoodTime;
+        }
+        
+        @font-face {
+            src: url(Fonts/Roboto.ttf);
+            font-family: Roboto;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            font-family: ManchesterUnited;
+            font-weight: 500;
+        }
+        
+        h2{
+            font-family: ManchesterUnited;
+            font-size: 22px;
+        }
+        
+        p{
+            font-family: Roboto;
+            font-weight: 800;
+            font-size: 5px;
+        }
+        
+        hr {
+            display: block;
+            border-width: 1px;
+            border-style: inset;
+            margin-top: 120px;
+        }
+        
+/* Grid Area */
+        .item1 {grid-area: horizontal;}
+        .item2 {grid-area: vertical;}
+        .item3 {grid-area: screen;}
+        .item4 {grid-area: bottom;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                'horizontal horizontal horizontal horizontal'
+                'vertical screen screen screen'
+                'vertical screen screen screen'
+                'vertical screen screen screen'
+                'bottom bottom bottom bottom'
+
+        }
+
+        .grid-container > div {
+            text-align: center;
+        }
+        
+/* Grid Area */
+        
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+        .nav {
+            background-color: white;
+            list-style-type: none;
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            margin: 0px;
+            width: 100%;
+            border: solid 1px black;
+            margin-right: -1px;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+
+        .nav li {
+            float: right;
+            margin-right: -1px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-family: NamDaoGoodTime;
+            padding: 33px 40px;
+            background-color: white;
+            font-size: 20px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.7s;
+            cursor: pointer;
+        }
+
+        .nav a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav a.active {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+/* Stylesheet for Vertical Navigation Bar */
+        
+        .nav1 {
+            background-color: white;
+            top: 108px;
+            padding: 0px;
+            list-style-type: none;
+            text-align: center;
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            left: 0px;
+            overflow: auto;
+            border: solid 1px black;
+            margin-left: -1px;
+        }
+
+        .nav1 li {
+            border: solid 1px black;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            font-size: 15px;
+            display: block;
+            padding: 30px 50px;
+            background-color: white;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+        
+        .nav1 a:hover {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Vertical Navigation Bar */
+        
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+        .nav2 {
+            background-color: white;
+            list-style-type: none;	
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            top: 75px;
+            width: 100%;
+          
+        }
+
+        .nav2 li {
+            float: left;
+            border: solid 1px black;
+            margin-top: -1px;
+            margin-right: -1px;
+            margin-left: -1px;
+  
+        }
+
+        .nav2 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            display: block;
+            padding: 10px 148.3px;
+            background-color: white;
+            font-size: 15px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .nav2 a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav2 a.active {
+            background-color: darkgrey;
+            color: black;
+        }
+        
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+    </style>
+    
+    <script>
+        function scrollToHash(contacts)
+        {
+            location.hash = "#" + contacts;
+        }
+        
+        function scorllToHash(players)
+        {
+            location.hash = "#" + players;
+        }
+    </script>
+</head>
+
+<body>
+    <div clas = "grid-container">
+        
+        <div class="item2">
+            
+                                                <!-- Vertical Navigation Bar -->
+            
+            <ul class="nav1">
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#players">Players</a></li>
+            </ul>
+            
+                                                <!-- Vertical Navigation Bar -->
+        </div>
+        
+        <div class="item1">
+
+                                                <!-- Horizontal Navigation Bar 1-->
+            
+            <ul class="nav">
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
+                    <ul>          
+                        <li><h1 class="fontsize"> Manchester United </h1></li>           
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
+                        </li>    
+                    </ul>
+                </li>
+                <li><a href="AboutContributions.html">About</a></li>
+                <li><a href="RegistrationForm.html">Registration</a></li>
+                <li><a href="ProductsAbout.html">Products</a></li>
+                <li><a class="active" href="IntroductionOriginOfTheClub.html">Introduction</a></li>
+            </ul>
+            
+                                                <!-- Horizontal Navigation Bar 1-->
+            
+                                                <!-- Horizontal Navigation Bar 2-->
+            
+            <ul class="nav2">    
+                <li><a href="IntroductionOriginOfTheClub.html">Origin of the club</a></li>
+                <li><a href="IntroductionSeasonKits.html">Season Kits</a></li>
+                <li><a class="active" href="IntroductionContributors.html">Contributors</a></li>
+            </ul>
+
+                                                <!-- Horizontal Navigation Bar 2-->
+            
+        </div> 
+        
+        <div class="item3">
+            <div style="margin-left:20%; padding: 120px 60px; height: auto;">
+                
+                                                
+                                                        <!--Contacts-->
+                <p id="contacts"></p>
+                    <br><br><br><br><br><br>
+                <div style="background-color: white; color:black; padding:40px 50px;">
+                    
+                    <h1 style="font-size: 50px; margin-top:15px;"> Contacts </h1>
+                    
+                    <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:17px; margin-left: 20px;">
+                            <img src="Images/AndrewKane.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Andrew Kane.
+                            <br>
+                            <u>Job:</u> Best Teacher ever.
+                            <br>
+                            <u>Email:</u> nhd36@drexel.edu.
+                            <br>
+                            <u>Description:</u> He is very responsive. He replied to Nam's email at midnight for deadline extension. He has been a great instructure throughtout the first term. Although we did not interact with him that much, we felt like he had been trying his best to create an opened environment for all the students to get involved in activities as well as lectures. We love him!
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                    <br>
+                    <br>
+                    
+                    <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:17px; margin-left: 20px;">
+                            <img src="Images/NamDao.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Nam Dao.
+                            <br>
+                            <u>Job:</u> Student.
+                            <br>
+                            <u>Email:</u> nhd36@drexel.edu.
+                            <br>
+                            <u>Description:</u> Not smart, but diligent, still sometimes lazy. Nam has zero experience about coding when he entered Drexel. Yet after first term at Drexel, Nam still has zero advanced knowledge about coding. But he always tries his best to complete Prof Kane's work. Nam lacks of time for study. But when he has, he still doesn't. He will wait untill when the deadline is due, so he can finish the work in 2 hours. This website was made in 2 hours (joking).
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                    <br>
+                    <br>
+                    
+                    <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:17px; margin-left: 20px;">
+                            <img src="Images/Viggy.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Vignesh Sadhasivan.
+                            <br>
+                            <u>Job:</u> Student.
+                            <br>
+                            <u>Email:</u> vs556@drexel.edu.
+                            <br>
+                            <u>Description:</u> Not smart, but diligent, still sometimes lazy. Nam has zero experience about coding when he entered Drexel. Yet after first term at Drexel, Nam still has zero advanced knowledge about coding. But he always tries his best to complete Prof Kane's work. Nam lacks of time for study. But when he has, he still doesn't. He will wait untill when the deadline is due, so he can finish the work in 2 hours. This website was made in 2 hours (joking).
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+            </div>
+                                                        <!-- Contact -->
+                <hr>
+                <p id="players"></p>
+                <br><br><br><br><br><br>
+                                                        <!-- Players -->
+            <div style="background-color: white; color:black; padding:40px 50px;">
+                 <h1 style="font-size: 50px; margin-top:15px;"> Players  </h1>
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/DeGea.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> De Gea.
+                            <br>
+                            <u>Position:</u> Goal Keeper.
+                            <br>
+                            <u>Description:</u> Born in Madrid, De Gea began his career aged 13 with Atlético Madrid and rose through the academy system at the club before making his senior debut in 2009. After being made Atlético's first-choice goalkeeper, he helped the team win both the UEFA Europa League and the UEFA Super Cup in 2010. His performances attracted the attention of Manchester United, which he joined in June 2011 for £18.9 million, a British record for a goalkeeper at the time.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/AaronWanBissaka.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Aaron Wan-Bissaka.
+                            <br>
+                            <u>Position:</u> Right Back.
+                            <br>
+                            <u>Description:</u> a professional footballer who plays as a right-back for Premier League club Manchester United and the England under-21 national team. Wan-Bissaka began his career with Crystal Palace and was named as the club's Player of the Year for the 2018–19 season. In 2019, he moved to Manchester United for an initial fee of £45 million, with another £5 million due in potential bonuses. He is of Congolese descent and made one appearance for DR Congo U20s in 2015. He has gone on to represent the country of his birth, England, at under-20 and under-21 levels.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/AndreasPereira.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Andreas Pereira.
+                            <br>
+                            <u>Position:</u> Mid-filder.
+                            <br>
+                            <u>Description:</u>a professional footballer who plays as a midfielder for English Premier League club Manchester United and the Brazil national team. Born in Duffel, Belgium, he began his youth career with nearby Lommel United. At the age of nine, he joined Dutch club PSV Eindhoven, before signing for Manchester United in November 2011. Pereira made his first Premier League appearance in March 2015. He has spent time on loan at Spanish clubs Granada and Valencia. He played international football for the youth teams of both the country of his birth, Belgium, and his father's homeland, Brazil, before making his senior debut for Brazil in September 2018.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/AngelGomes.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Angel Gomes.
+                            <br>
+                            <u>Position:</u> Attacking Mid-fielder.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays as an attacking midfielder for Premier League club Manchester United. Gomes is the youngest player to represent Manchester United since Duncan Edwards in 1953, as well as the first player born in the 2000s to appear in the Premier League. He has captained England at under-16, under-17 and under-18 levels.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/AnthonyMartial.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Anthony Martial.
+                            <br>
+                            <u>Position:</u> Forward.
+                            <br>
+                            <u>Description:</u> A French professional footballer who plays as a forward for Premier League club Manchester United and the France national team. He was the recipient of the 2015 Golden Boy Award for the best under-21 player in Europe. Playing youth football for Les Ulis, he began his professional career at Lyon, then transferred to AS Monaco in 2013 for a fee of €6 million. He was a member of Monaco's squad for two seasons, and signed for Manchester United in 2015 for an initial fee of £36 million which could potentially rise to £57.6 million. This was the highest fee paid for a teenager in football history even before the potential increase. He scored in his first match for United, and was named the Premier League Player of the Month in his first month in English football.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/AshleyYoung.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Ashley Young.
+                            <br>
+                            <u>Position:</u> Winger/Fullback.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays as a winger or full back for Premier League club Manchester United, as their club captain, and the England national team. Born and raised in Hertfordshire, Young started his career at Watford, making his first senior appearances in 2003 under the management of Ray Lewington. He became a first-team regular in 2004–05, and was one of Watford's key players in their promotion winning 2005–06 season. Young continued to play well for Watford in the Premier League, and in January 2007 he transferred to Aston Villa for an £8 million fee, rising to £9.65 million with add-ons. He established himself in the first team at Villa Park and won the PFA Young Player of the Year award in 2009.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/AxelTuanbeze.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Axel Tuanbeze.
+                            <br>
+                            <u>Position:</u> Fullback.
+                            <br>
+                            <u>Description:</u> Tuanzebe's preferred position is at centre-back, but he can also play as a right-back, and has featured as a holding midfielder. His playing style has been compared to that of teammate Eric Bailly and Bayern Munich's Javi Martínez. Tuanzebe's performance on his first-team debut in a friendly against Wigan Athletic in July 2016 led manager José Mourinho to remark, "10 minutes is enough! The potential is there, you see it immediately.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/BradonWilliams.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Bradon Williams.
+                            <br>
+                            <u>Position:</u> Leftback.
+                            <br>
+                            <u>Description:</u> Williams made his first-team debut for Manchester United on 25 September 2019 in an EFL Cup match against Rochdale. He made his full debut on 3 October 2019 in the UEFA Europa League match against AZ Alkmaar. Williams signed a new long-term contract on 17 October 2019, keeping him at the club until June 2022. He made his Premier League debut on 20 October 2019 against Liverpool at Old Trafford as a late substitute. He was voted Man of the Match by the Manchester United fans. On 24 November, Williams scored his debut goal for Manchester United in a 3–3 draw with Sheffield United
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/DanielJames.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Daniel James.
+                            <br>
+                            <u>Position:</u> Winger.
+                            <br>
+                            <u>Description:</u> a professional footballer who plays as a winger for Premier League club Manchester United and the Wales national team. He made his professional debut for Swansea City in February 2018, and signed for Manchester United in June 2019. He made his senior Wales debut in November 2018, having previously represented the nation at various youth levels.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/DiogoDalot.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Diogo Dalot.
+                            <br>
+                            <u>Position:</u> Fullback/Winger.
+                            <br>
+                            <u>Description:</u> Born in Braga, Dalot joined Porto's youth system in 2008, aged nine. On 28 January 2017, he made his senior debut with the B team, playing the full 90 minutes in a 2–1 home loss against Leixões S.C. for the LigaPro championship. Dalot first appeared with the first team in competitive games on 13 October 2017, starting in a 6–0 away win over Lusitano G.C. for the season's Taça de Portugal. He first played in the Primeira Liga on 18 February 2018, coming on as a 75th-minute substitute in a 5–0 home routing of Rio Ave FC. Dalot signed for Premier League club Manchester United on 6 June 2018 on a five-year contract for a fee of £19 million. He made his debut on 19 September 2018 in an away UEFA Champions League group stage match against Swiss side Young Boys
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/EricBaily.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Eric Baily.
+                            <br>
+                            <u>Position:</u> Central Defender.
+                            <br>
+                            <u>Description:</u> an Ivorian professional footballer who plays for English Premier League club Manchester United and the Ivory Coast national team. Mainly a central defender, he can also play as a right-back. Bailly began his professional career at Spain's Espanyol, before transferring to Villarreal. He spent two seasons at the club before signing for Manchester United in June 2016. He made his international debut for the Ivory Coast in 2015 and helped them win that year's Africa Cup of Nations.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/Fred.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Fred.
+                            <br>
+                            <u>Position:</u> Mid-fielder.
+                            <br>
+                            <u>Description:</u> a Brazilian professional footballer who plays as a midfielder for English Premier League club Manchester United and the Brazil national team. Fred started his career at Brazilian club Internacional, where he won the Campeonato Gaúcho twice. On 26 June 2013, he signed for Ukrainian club Shakhtar Donetsk, where he won 10 trophies, including four Ukrainian Premier League titles. In 2018, Fred signed for Manchester United. Fred was part of Brazil's squad for the 2015 Copa América in Chile, starting in their final two Group C matches as they reached the quarter-finals. He was named in Brazil's final 23-man squad for the 2018 FIFA World Cup.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/HarryMaguire.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Harry Maguire.
+                            <br>
+                            <u>Position:</u> Centre-back.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays as a centre-back for Premier League club Manchester United and the England national team. Born in Sheffield, he came through the youth system at Sheffield United before graduating to the first team in 2011. He totalled 166 professional games for the Blades and was their Player of the Year three consecutive times, also featuring in the PFA Team of the Year for League One as many times. In 2014, he transferred to Hull City for £2.5 million, who loaned him to Wigan Athletic in 2015. He joined Leicester City in 2017 for an initial fee of £12 million. Two years later, he moved to Manchester United for a fee believed to be £80 million, a world-record fee for a defender. Maguire played one match for England under-21 in 2012. In October 2017, he made his senior debut, and he was chosen for the 2018 FIFA World Cup squad.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/JesseLingard.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Jesse Lingard.
+                            <br>
+                            <u>Position:</u> Attacking Mid-fielder/Winger.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays as an attacking midfielder or as a winger for Premier League club Manchester United and the England national team. Lingard made his senior debut while on loan at Leicester City in 2012, and spent time on loan at Birmingham City and Brighton & Hove Albion during the 2013–14 season and at Derby County in 2015. He represented England at under-17 and under-21 levels, before making his senior international debut in October 2016 and went to represent his country at the 2018 FIFA World Cup, a tournament where England reached the semi finals, finishing fourth.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/JuanMata.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Juan Mata.
+                            <br>
+                            <u>Position:</u> Mid fielder.
+                            <br>
+                            <u>Description:</u> a Spanish professional footballer who plays as a midfielder for Premier League club Manchester United and the Spain national team. He mostly plays as a central attacking midfielder, but he can also play on the wing. A graduate of Real Madrid's youth academy, Mata played for Real Madrid Castilla in 2006–07, before joining Valencia in the summer of 2007. He became an integral part of the club's midfield, making 174 appearances over the course of four seasons. In August 2011, Mata signed for English club Chelsea of the Premier League for a fee believed to be in the region of €28 million, and in his debut season was part of the team that won the UEFA Champions League and the FA Cup. 
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/LeeGrant.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Lee Grant.
+                            <br>
+                            <u>Position:</u> Goal Keeper.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays as a goalkeeper for Premier League club Manchester United. Grant began his professional career with Derby County, making his Football League debut in September 2002. Grant spent five seasons with Derby, during which time he went out on loan to Burnley and Oldham Athletic. He joined Sheffield Wednesday in July 2007 and established himself as first choice goalkeeper, playing in 136 consecutive matches. He moved to Burnley in July 2010, where he made 126 appearances in three seasons, before returning to Derby County in May 2013. Grant joined Stoke City in August 2016, initially on loan, before a permanent transfer in January 2017. He spent two seasons at Stoke before moving to Manchester United in July 2018.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/LukeShaw.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Luke Shaw.
+                            <br>
+                            <u>Position:</u> Left-back.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays as a left-back for Premier League club Manchester United and the England national team. Originally a member of Southampton's youth system, Shaw made his first-team debut for the club in January 2012, and signed his first professional contract in May that year before becoming a regular in the Southampton team over the next two seasons. In June 2014, Shaw was signed by Manchester United for £30 million, then a world record transfer fee for a teenager. On 5 March 2014, he made his senior international debut for the England team in a 1–0 friendly win against Denmark, and later that year was selected in the squad for the FIFA World Cup.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/MarcosRojo.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Marcos Rojo.
+                            <br>
+                            <u>Job:</u> Student.
+                            <br>
+                            <u>Description:</u> an Argentine professional footballer who plays as a defender for Premier League club Manchester United and the Argentina national team. He began his career at local club Estudiantes de La Plata, where he won the Copa Libertadores in 2009 and played in the Club World Cup Final later that year. After a short spell with Spartak Moscow he joined Sporting CP in 2012, and transferred to Manchester United for £16 million two years later. Rojo made his first appearance for Argentina at senior level in 2011 and has since earned over 60 caps. He was part of their side which reached the 2014 FIFA World Cup Final, and was the only Argentine included in the Castrol Performance Index Team of the Tournament. He was also a Copa América runner-up in 2015 and 2016 and took part at the 2018 FIFA World Cup.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: 20px;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/MarcusRashford.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Marcus Rashford.
+                            <br>
+                            <u>Position:</u> Forward.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays as a forward for Premier League club Manchester United and the England national team. A Manchester United player from the age of seven, he scored two goals on both his first-team debut against Midtjylland in the UEFA Europa League in February 2016 and his Premier League debut against Arsenal three days later. He also scored in his first Manchester derby match, his first League Cup match and his first UEFA Champions League match. Rashford scored on his England debut in May 2016, becoming the youngest English player to score in his first senior international match. He played at the UEFA Euro 2016 as the tournament's youngest player, and at the 2018 FIFA World Cup.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/MasonGreenWood.jpeg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Mason Greenwood6y.
+                            <br>
+                            <u>Position:</u> Forward.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays as a forward for Premier League club Manchester United and the England under-21 team. Greenwood made his first start for Manchester United in 2019 in a UEFA Europa League match against Astana, in which he scored becoming the club's youngest ever goalscorer in European competition at the age of 17 years, 353 days. Greenwood made his debut for England under-21 in the qualifying for the 2021 UEFA European Under-21 Championship.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/NemanjaMatic.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Nemanja Matic.
+                            <br>
+                            <u>Position:</u> Defensive Mid-fielder.
+                            <br>
+                            <u>Description:</u> a Serbian professional footballer who plays as a defensive midfielder for English Premier League club Manchester United and the Serbian national team. Starting his career as an attacking midfielder, Matić shifted to a defensive midfielder during his spell at Benfica.[5] He is known for his consistent performances on the pitch and his combative style of play.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/PaulPogba.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Paul Pogba.
+                            <br>
+                            <u>Position:</u> Defensive Mid-fielder.
+                            <br>
+                            <u>Description:</u> a French professional footballer who plays for Premier League club Manchester United and the French national team. He operates primarily as a central midfielder, but can also be deployed as an attacking midfielder, defensive midfielder, and deep-lying playmaker. Pogba's performances at Juventus allowed him to return to Manchester United in 2016 for a then-world record transfer fee of €105 million (£89.3 million). The fee paid for him remains the highest paid by an English club. In his first season back, he won the League Cup and the Europa League.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/PhilJones.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Phil Jones.
+                            <br>
+                            <u>Position:</u> Rightback/Defensive Mid-fielder.
+                            <br>
+                            <u>Description:</u> an English professional footballer who plays for Premier League club Manchester United and the English national team. Before joining Manchester United, Jones played for Blackburn Rovers at both youth and senior levels. Although primarily a centre-back, he has also been used as a right-back or defensive midfielder. Jones has represented England at various levels and is currently a member of the England senior squad. He played for the under-19 team in 2009 before making his debut for the under-21 team in 2010. He made his debut for the England senior team on 7 October 2011.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/ScottMcTominay.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Scott MacTominay.
+                            <br>
+                            <u>Position:</u> Central Mid-fielder.
+                            <br>
+                            <u>Description:</u> McTominay scored his first goal at Old Trafford in a 1–1 draw against Arsenal on 30 September 2019. On 27 October 2019, McTominay scored United's landmark 2,000th Premier League goal in a 3–1 victory against Norwich City at Carrow Road. On 10 November 2019, McTominay scored against Brighton, initially credited as an own goal by Davy Pröpper, United successfully appealed the award of the goal three days later, on 13 November, which has been switched to McTominay after a decision by the Premier League's Goal Accreditation Appeals Panel. The three-person panel reached their verdict after reviewing the match footage.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/SergioRomero.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Sergio Romero.
+                            <br>
+                            <u>Position:</u> Goal Keeper.
+                            <br>
+                            <u>Description:</u> an Argentine professional footballer who plays as a goalkeeper for English Premier League club Manchester United and the Argentina national team. He made his debut with Racing Club in the Argentine Primera División in 2007 and then transferred to Dutch club AZ at the end of the season. He won the Eredivisie in 2009 and two years later joined Italian side Sampdoria. In 2013, he joined Monaco on a season-long loan. He joined Manchester United in July 2015. Romero is the most capped goalkeeper in the history of the Argentine national team, playing over 90 times since his debut in 2009. He has represented Argentina at two World Cups and at three Copa América tournaments, finishing as runner-up in the 2014 FIFA World Cup, as well as in the 2015 and the 2016 Copa América tournaments. He also was part of the team that won gold at the 2008 Olympics.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/TimothyFosu.png" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Timothy Fosu.
+                            <br>
+                            <u>Position:</u> Positive Mid-fielder/Centreback/Fullback.
+                            <br>
+                            <u>Description:</u> Born in Amsterdam to Ghanaian parents, Fosu-Mensah began his career with Ajax, before moving to England in 2014. Fosu-Mensah has played for Manchester United's youth teams in a variety of positions, including centre-back, right-back and central midfield. He made his professional debut at left-back on 28 February 2016, in a 3–2 Premier League win at home to Arsenal, coming on as a 55th-minute substitute for Marcos Rojo. On 19 October 2016, he signed a new long-term contract with Manchester United until 2020, with the option to extend for a further year
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div style="display:block; border: solid 1px black; overflow: auto;">
+                        <p style="font-size:15px; margin-left: 20px;">
+                            <img src="Images/MUPlayers/VictorLindelof.jpg" alt="MULogo"
+                                 style="float:right; margin-right: 20px; margin-left: 20px; margin-bottom: 20px; width:200px; height:200px;">
+                            <u>Name:</u> Victor Lindelof.
+                            <br>
+                            <u>Position:</u> Defender.
+                            <br>
+                            <u>Description:</u> a Swedish professional footballer who plays as a defender for English Premier League club Manchester United and the Sweden national team. Mainly a centre-back, he can also play as a right-back. Lindelöf began his career in Sweden at Västerås SK, making his debut in September 2010. In December 2011, he agreed to move to Benfica in Portugal, initially representing the club at youth and B levels. After making his first-team debut in September 2013, he continued to appear for the club at B level, while also winning three Primeira Liga titles.
+                            <br>
+                            <br>
+                        </p>
+                </div>
+                
+                <br>
+                <br>
+                
+            </div>
+        
+        </div>
+            <h3 style="margin-left: 53%; font-size: 18px; color:white;"><b>Design by Nam Dao and Vignesh</b></h3>
+    </div>
+    
+    
+</body>
+</html>

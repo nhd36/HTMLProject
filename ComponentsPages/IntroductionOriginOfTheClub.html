@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function scrollToHash(Origin)
+        {
+            location.hash = "#" + Origin;
+        }
+        
+        function scrollToHash(LogoDesign)
+        {
+            location.hash = "#" + LogoDesign;
+        }
+    </script>
+    
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        @font-face {
+            src: url(Fonts/Prisma.ttf);
+            font-family: ManchesterUnited;
+        }
+        @font-face {
+            src: url(Fonts/GoodTime.ttf);
+            font-family: NamDaoGoodTime;
+        }
+        
+        @font-face {
+            src: url(Fonts/Roboto.ttf);
+            font-family: Roboto;
+        }
+        h1 {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            font-family: ManchesterUnited;
+            font-weight: 500;
+        }
+        
+        h2{
+            font-family: ManchesterUnited;
+            font-size: 22px;
+        }
+        
+        hr {
+            display: block;
+            border-width: 1px;
+            border-style: inset;
+        }
+        
+/* Grid Area */
+        .item1 {grid-area: horizontal;}
+        .item2 {grid-area: vertical;}
+        .item3 {grid-area: screen;}
+        .item4 {grid-area: bottom;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                'horizontal horizontal horizontal horizontal'
+                'vertical screen screen screen'
+                'vertical screen screen screen'
+                'vertical screen screen screen'
+                'bottom bottom bottom bottom'
+
+        }
+
+        .grid-container > div {
+            text-align: center;
+        }
+        
+/* Grid Area */
+        
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+        .nav {
+            background-color: white;
+            list-style-type: none;
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            margin: 0px;
+            width: 100%;
+            border: solid 1px black;
+            margin-right: -1px;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+
+        .nav li {
+            float: right;
+            margin-right: -1px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-family: NamDaoGoodTime;
+            padding: 33px 40px;
+            background-color: white;
+            font-size: 20px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.7s;
+            cursor: pointer;
+        }
+
+        .nav a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav a.active {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+/* Stylesheet for Vertical Navigation Bar */
+        
+        .nav1 {
+            background-color: white;
+            top: 108px;
+            padding: 0px;
+            list-style-type: none;
+            text-align: center;
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            left: 0px;
+            overflow: auto;
+            border: solid 1px black;
+            margin-left: -1px;
+        }
+
+        .nav1 li {
+            border: solid 1px black;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            font-size: 15px;
+            display: block;
+            padding: 30px 50px;
+            background-color: white;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+        
+        .nav1 a:hover {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Vertical Navigation Bar */
+        
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+        .nav2 {
+            background-color: white;
+            list-style-type: none;	
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            top: 75px;
+            width: 100%;
+        }
+
+        .nav2 li {
+            float: left;
+            border: solid 1px black;
+            margin-top: -1px;
+            margin-right: -1px;
+            margin-left: -1px;
+  
+        }
+
+        .nav2 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            display: block;
+            padding: 10px 148.3px;
+            background-color: white;
+            font-size: 15px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .nav2 a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav2 a.active {
+            background-color: darkgrey;
+            color: black;
+        }
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+    </style>
+</head>
+
+<body>
+        
+        <div>
+            
+                                                <!-- Vertical Navigation Bar -->
+            
+            <ul class="nav1">
+                <li><a href="#Origin">Origin</a></li>
+                <li><a href="#LogoDesign">Logo Design</a></li>
+            </ul>
+            
+                                                <!-- Vertical Navigation Bar -->
+        </div>
+        
+        <div>
+
+                                                <!-- Horizontal Navigation Bar -->
+            
+            <ul class="nav">
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
+                    <ul>          
+                        <li><h1 class="fontsize"> Manchester United </h1></li>           
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
+                        </li>    
+                    </ul>
+                </li>
+                <li><a href="AboutContributions.html">About</a></li>
+                <li><a href="RegistrationForm.html">Registration</a></li>
+                <li><a href="ProductsAbout.html">Products</a></li>
+                <li><a class="active" href="IntroductionOriginOfTheClub.html">Introduction</a></li>
+            </ul>
+            
+            <ul class="nav2">    
+                <li><a class="active" href="IntroductionOriginOfTheClub.html">Origin of the club</a></li>
+                <li><a href="IntroductionSeasonKits.html">Season Kits</a></li>
+                <li><a href="IntroductionContributors.html">Contributors</a></li>
+            </ul>
+        </div> 
+                                                <!-- Horizontal Navigation Bar -->
+        
+        <div>
+            <div style="margin-left:20%; padding: 120px 60px; height: auto;">
+                <p id="Origin"></p>
+                <br><br><br><br><br><br>
+                <div style="background-color: white; color:black; padding:40px 50px;">
+                    <h1 style="font-size: 50px;"> Origin </h1>
+                    <p style="font-size:22px; font-family: Roboto;">
+                        <img src="Images/MULogo5.png" alt="MULogo"
+                             style="float:right; width:400px; height:400px;">
+                        
+                        Manchester United Football Club is a professional football club based in Old Trafford, Greater Manchester, England, that competes in the Premier League, the top flight of English football. Nicknamed "the Red Devils", the club was founded as Newton Heath LYR Football Club in 1878, changed its name to Manchester United in 1902 and moved to its current stadium, Old Trafford, in 1910.
+                        <br>
+                        <br>
+                        The 1958 Munich air disaster claimed the lives of eight players. In 1968, under the management of Matt Busby, Manchester United became the first English football club to win the European Cup. Alex Ferguson won 38 trophies as manager, including 13 Premier League titles, 5 FA Cups and 2 UEFA Champions Leagues, between 1986 and 2013, when he announced his retirement.
+                    </p>
+                </div>
+                <br><br><br><br><br>
+                <hr>
+                <p id="LogoDesign"></p>
+                <br><br><br><br><br>
+                <div style="background-color: white; color: black; padding:40px 50px;">
+                    <h1 style="font-size: 50px;"> Logo Design </h1>
+                    <h2> The First Logo </h2>
+                    <p style="font-size:22px; font-family: Roboto;">
+                        <img src="Images/MUFirstLogo.jpg" alt="MULogo"
+                             style="float:right; width:250px; height:350px;">
+                        The Manchester United logo you see today is based on the coat of arms of the Manchester City Council. Manchester City Council coat of arms was first embroidered on Manchester United shirts for the big game in 1963 FA Cup Final.
+                        <br>
+                        <br>
+                        The ship on the Manchester United crest from the early days is a reference to Manchester's trading prowess and the ship canal.
+                        <br>
+                        <br>
+                        The globe on top represents the city's world trading power while the bees on the globe represent a creature that is known for it's industry and endeavor, with Manchester being the birthplace of industrial revolution, this symbol was added to the early Manchester United logo.
+                        <br>
+                        <br>
+                        Two animals on the coat of arms are an Antelope and a Lion.
+                        <br>
+                        <br>
+                        Antelope wears a gold chain that refers to the city's engineering feats and the lion wears a castle crown because the city of Manchester grew up around the Roman settlement of Castle-field.
+                        <br>
+                        <br>
+                        Both animals wear the red rose which is the official symbol of Lancashire.
+                        <br>
+                        <br>
+                        "Consilio et Labore" translates as "Wisdom and Effort".
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h2> The Second Logo </h2>
+                    <p style="font-size:22px; font-family: Roboto;">
+                        <img src="Images/MUSecondLogo.png" alt="MULogo"
+                             style="float:right; width:250px; height:250px;">
+                        Manchester United badge during the 1960's featured the newly designed badge taking the shield and ship from the Manchester City Council coat of arms, with the words "Manchester United" on the top banner and "Footbal Club" on the bottom banner.
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        This new badge was designed in line with the new style of play that Matt Busby brought to Manchester United during the late 1940's.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h2> The Third Logo </h2>
+                    <p style="font-size:22px; font-family: Roboto;">
+                        <img src="Images/MUThirdLogo.jpg" alt="MULogo"
+                             style="float:right; width:350px; height:300px;">
+                        1970's saw the first famous devil symbol on the Manchester United badge replacing the three yellow stripes.
+                        <br>
+                        <br>
+                        This had been the team's nickname ever since Matt Busby adopted it for the club several years earlier.
+                        <br>
+                        <br>
+                        He wanted to strike fear into his opponents with a new nickname as he felt the Busby Babes would not do this.
+                        <br>
+                        <br>
+                        It is said that he got the name from the Salford City Reds rugby league team who were given the nickname Les Diables Rouges (The Red Devils) by the French media after a successful tour of the country in 1934 .
+                        <br>
+                        <br>
+                        1972-73 saw the Manchester United logo become a permanent feature on the Man United FC football shirt.
+                        <br>
+                        <br>
+                        Up until then the club would only use the Manchester City Council coat of arms on their shirts in cup finals.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h2> The Present </h2>
+                    <p style="font-size:22px; font-family: Roboto;">
+                        <img src="Images/MULogo5.png" alt="MULogo"
+                             style="float:right; width:300px; height:300px;">
+                        Manchester United FC logo remained pretty much unaltered for the next 28 years.
+                        <br>
+                        <br>
+                        In 1998 the badge lost the "Football Club" from the banner and replaced it with "United" which of course was taken from the top banner.
+                        <br>
+                        <br>
+                        The new design was created in an effort to turn Manchester United into a brand as it seemed like the club no longer wanted to be known as just a Manchester United football club.
+                        <br>
+                        <br>
+                </div>
+                <br><br><br><br><br>
+                <hr>
+                <br><br><br><br><br>
+                
+                <div style="background-color: white; color:black; padding:40px 50px;">
+                    <h1 style="font-size: 50px;"> Value </h1>
+                    <p style="font-size:22px; font-family: Roboto;">
+                        Manchester United have won more trophies than any other club in English football,with a record 20 League titles, 12 FA Cups, five League Cups and a record 21 FA Community Shields. United have also won three UEFA Champions Leagues, one UEFA Europa League, one UEFA Cup Winners' Cup, one UEFA Super Cup, one Intercontinental Cup and one FIFA Club World Cup. In 1998–99, the club became the first in the history of English football to achieve the continental European treble. By winning the UEFA Europa League in 2016–17, they became one of five clubs to have won all three main UEFA club competitions.
+                        <br>
+                        <br>
+                        <img src="Images/ManchesterUnitedBestTeam.jpg" alt="MUBestTeamXI"
+                             style="text-align:center; width:870px; height:550px;">
+                    </p>
+            </div>
+                
+        </div>
+            
+       </div>     
+            <h3 style="margin-left: 53%; font-size: 18px; color:white;"><b>Design by Nam Dao and Vignesh</b></h3>
+    
+    
+</body>
+</html>

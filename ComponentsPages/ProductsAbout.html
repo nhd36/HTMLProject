@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        @font-face {
+            src: url(Fonts/Prisma.ttf);
+            font-family: ManchesterUnited;
+        }
+        @font-face {
+            src: url(Fonts/GoodTime.ttf);
+            font-family: NamDaoGoodTime;
+        }
+        @font-face{
+            src: url(Fonts/Roboto.ttf);
+            font-family: Roboto;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            font-family: ManchesterUnited;
+            font-weight: 500;
+        }
+        
+        h2{
+            font-family: ManchesterUnited;
+            font-size: 22px;
+        }
+        
+        hr {
+            display: block;
+            border-width: 1px;
+            border-style: inset;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        
+/* Grid Area */
+        .item1 {grid-area: horizontal;}
+        .item2 {grid-area: vertical;}
+        .item3 {grid-area: screen;}
+        .item4 {grid-area: bottom;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                'horizontal horizontal horizontal horizontal'
+                'screen screen screen screen'
+                'screen screen screen screen'
+                'screen screen screen screen'
+
+        }
+
+        .grid-container > div {
+            text-align: center;
+        }
+        
+/* Grid Area */
+        
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+        .nav {
+            background-color: white;
+            list-style-type: none;
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            margin: 0px;
+            width: 100%;
+            border: solid 1px black;
+            margin-right: -1px;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+
+        .nav li {
+            float: right;
+            margin-right: -1px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-family: NamDaoGoodTime;
+            padding: 33px 40px;
+            background-color: white;
+            font-size: 20px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.7s;
+            cursor: pointer;
+        }
+
+        .nav a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav a.active {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+/* Stylesheet for Vertical Navigation Bar */
+        
+        .nav1 {
+            background-color: white;
+            top: 108px;
+            padding: 0px;
+            list-style-type: none;
+            text-align: center;
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            left: 0px;
+            overflow: auto;
+            border: solid 1px black;
+            margin-left: -1px;
+        }
+
+        .nav1 li {
+            border: solid 1px black;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            font-size: 15px;
+            display: block;
+            padding: 30px 50px;
+            background-color: white;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+        
+        .nav1 a:hover {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Vertical Navigation Bar */
+        
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+        .nav2 {
+            background-color: white;
+            list-style-type: none;	
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            top: 75px;
+            width: 100%;
+        }
+
+        .nav2 li {
+            float: left;
+            border: solid 1px black;
+            margin-top: -1px;
+            margin-right: -1px;
+            margin-left: -1px;
+  
+        }
+
+        .nav2 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            display: block;
+            padding: 10px 179px;
+            background-color: white;
+            font-size: 15px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .nav2 a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav2 a.active {
+            background-color: darkgrey;
+            color: black;
+        }
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+    </style>
+</head>
+
+<body>
+    <div clas = "grid-container">
+        
+        <div class="item1">
+
+                                                <!-- Horizontal Navigation Bar -->
+            
+            <ul class="nav">
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
+                    <ul>          
+                        <li><h1 class="fontsize"> Manchester United </h1></li>           
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
+                        </li>    
+                    </ul>
+                </li>
+                <li><a href="AboutContributions.html">About</a></li>
+                <li><a href="RegistrationForm.html">Registration</a></li>
+                <li><a class="active" href="ProductsAbout.html">Products</a></li>
+                <li><a href="IntroductionOriginOfTheClub.html">Introduction</a></li>
+            </ul>
+            
+            <ul class="nav2">    
+                <li><a class="active" href="ProductsAbout.html">About</a></li>
+                <li><a href="ProductsKits.html">Season Kits</a></li>
+                <li><a href="ProductsUtilities.html">Utilities</a></li>
+            </ul>
+
+                                                <!-- Horizontal Navigation Bar -->
+            
+        </div> 
+        
+        <div class="item3">
+            <div style=" padding: 210px 60px;">
+                <div style="background-color: white; color:black; padding:40px 50px; overflow: auto;">
+                    <h1 style="font-size: 50px;"> About </h1>
+                    <p style="font-size:22px; margin-left: 40px; margin-right: 40px; font-family: Roboto;">
+                         
+                        Our company has been one of the best companions with Manchester United through the recent years. We always sell authentic and great qualitied products to satisfy customers. Moreover, we also expand to broader products that would give our buyers a massive quantities of goods to cover customers' demand.
+                        
+                    </p>
+                        <img src="Images/MULogo5.png" alt="MULogo"
+                             style="margin-left: 32%; width:400px; height:400px;">
+                    
+                    <p style="font-size:22px; margin-left: 40px; margin-right: 40px; font-family: Roboto;">
+                        
+                        From now on, we will always try our best to give both parties the best results to create more satisfaction for the customers as well as for the board of the company. The sport equipments are all belong to the property of Manchester United. Old Traford will travel with you to every corner of your daily life. Happy Thanks Giving!
+                    
+                        <hr>
+                    </p>
+                    
+                </div>
+                
+        </div>
+            <h3 style="margin-left: 42%; font-size: 18px; color:white;"><b>Design by Nam Dao and Vignesh</b></h3>
+    </div>
+    
+    
+</body>
+</html>

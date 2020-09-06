@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function scrollToHash (kitsdesign)
+        {
+            location.hash = "#" + kitsdesign;
+        }
+        function scrollToHash (kitsovertime)
+        {
+            location.hash = "#" + kitsovertime;
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @font-face {
+            src: url(Fonts/Prisma.ttf);
+            font-family: ManchesterUnited;
+        }
+        @font-face {
+            src: url(Fonts/GoodTime.ttf);
+            font-family: NamDaoGoodTime;
+        }
+        
+        @font-face {
+            src: url(Fonts/Roboto.ttf);
+            font-family: Roboto;
+        }
+        h1 {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            font-family: ManchesterUnited;
+            font-weight: 500;
+        }
+        
+        h2{
+            font-family: ManchesterUnited;
+            font-size: 22px;
+        }
+        
+        hr {
+            display: block;
+            border-width: 1px;
+            border-style: inset;
+            margin-top: 120px;
+        }
+        
+/* Grid Area */
+        .item1 {grid-area: horizontal;}
+        .item2 {grid-area: vertical;}
+        .item3 {grid-area: screen;}
+        .item4 {grid-area: bottom;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                'horizontal horizontal horizontal horizontal'
+                'vertical screen screen screen'
+                'vertical screen screen screen'
+                'vertical screen screen screen'
+                'bottom bottom bottom bottom'
+
+        }
+
+        .grid-container > div {
+            text-align: center;
+        }
+        
+/* Grid Area */
+        
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+        .nav {
+            background-color: white;
+            list-style-type: none;
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            margin: 0px;
+            width: 100%;
+            border: solid 1px black;
+            margin-right: -1px;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+
+        .nav li {
+            float: right;
+            margin-right: -1px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-family: NamDaoGoodTime;
+            padding: 33px 40px;
+            background-color: white;
+            font-size: 20px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.7s;
+            cursor: pointer;
+        }
+
+        .nav a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav a.active {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+/* Stylesheet for Vertical Navigation Bar */
+        
+        .nav1 {
+            background-color: white;
+            top: 108px;
+            padding: 0px;
+            list-style-type: none;
+            text-align: center;
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            left: 0px;
+            overflow: auto;
+            border: solid 1px black;
+            margin-left: -1px;
+        }
+
+        .nav1 li {
+            border: solid 1px black;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            font-size: 15px;
+            display: block;
+            padding: 30px 50px;
+            background-color: white;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+        
+        .nav1 a:hover {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Vertical Navigation Bar */
+        
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+        .nav2 {
+            background-color: white;
+            list-style-type: none;	
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            top: 75px;
+            width: 100%;
+        }
+
+        .nav2 li {
+            float: left;
+            border: solid 1px black;
+            margin-top: -1px;
+            margin-right: -1px;
+            margin-left: -1px;
+  
+        }
+
+        .nav2 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            display: block;
+            padding: 10px 148.3px;
+            background-color: white;
+            font-size: 15px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .nav2 a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav2 a.active {
+            background-color: darkgrey;
+            color: black;
+        }
+        
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+    </style>
+</head>
+
+<body>
+    <div clas = "grid-container">
+        
+        <div class="item2">
+            
+                                                <!-- Vertical Navigation Bar -->
+            
+            <ul class="nav1">
+                <li><a href="#kitsdesign">Kits Design</a></li>
+                <li><a href="#kitsovertime">Kits Over Time</a></li>
+            </ul>
+            
+                                                <!-- Vertical Navigation Bar -->
+        </div>
+        
+        <div class="item1">
+
+                                                <!-- Horizontal Navigation Bar -->
+            
+            <ul class="nav">
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
+                    <ul>          
+                        <li><h1 class="fontsize"> Manchester United </h1></li>           
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
+                        </li>    
+                    </ul>
+                </li>
+                <li><a href="AboutContributions.html">About</a></li>
+                <li><a href="RegistrationForm.html">Registration</a></li>
+                <li><a href="ProductsAbout.html">Products</a></li>
+                <li><a class="active" href="IntroductionOriginOfTheClub.html">Introduction</a></li>
+            </ul>
+            
+            <ul class="nav2">    
+                <li><a href="IntroductionOriginOfTheClub.html">Origin of the club</a></li>
+                <li><a class="active" href="IntroductionSeasonKits.html">Season Kits</a></li>
+                <li><a href="IntroductionContributors.html">Contributors</a></li>
+            </ul>
+
+                                                <!-- Horizontal Navigation Bar -->
+            
+        </div> 
+        
+        <div class="item3">
+            <div style="margin-left:20%; padding: 120px 60px; height: 2800px;">
+                
+                <p id="kitsdesign"></p>
+                <br><br><br><br><br><br>
+                <div style="background-color: white; color:black; padding:40px 50px;">
+                    <h1 style="font-size: 50px;"> Kits Design </h1>
+                    <p style="font-size:22px; font-family: Roboto;">
+                        <img src="Images/MUFirstKit.jpg" alt="MULogo"
+                             style="width:850px; height:600px;">
+                        <br>
+                        <br>
+                        Newton Heath's uniform in 1879, four years before the club played its first competitive match, has been documented as
+                        'white with blue cord'. A photograph of the Newton Heath team, taken in 1892, is believed to show the players wearing red-and-white quartered jerseys and navy blue knickerbockers. Between 1894 and 1896, the players wore distinctive green and gold jerseys which were replaced in 1896 by white shirts, which were worn with navy blue shorts.
+                        <br>
+                        <br>
+                        After the name change in 1902, the club colours were changed to red shirts, white shorts, and black socks, which has become the standard Manchester United home kit. Very few changes were made to the kit until 1922 when the club adopted white shirts bearing a deep red "V" around the neck, similar to the shirt worn in the 1909 FA Cup Final. They remained part of their home kits until 1927. For a period in 1934, the cherry and white hooped change shirt became the home colours, but the following season the red shirt was recalled after the club's lowest ever league placing of 20th in the Second Division and the hooped shirt dropped back to being the change. The black socks were changed to white from 1959 to 1965, where they were replaced with red socks up until 1971 with white used on occasion, when the club reverted to black. Black shorts and/or white socks are sometimes worn with the home strip, most often in away games, if there is a clash with the opponent's kit. For 2018–19, black shorts and red socks became the primary choice for the home kit. Since 1997–98, white socks have been the preferred choice for European games, which are typically played on weeknights, to aid with player visibility. The current home kit is a red shirt with the trademark Adidas three stripes in red on the shoulders, white shorts, and black socks.
+                        <br>
+                        <br>
+                        The Manchester United away strip has often been a white shirt, black shorts and white socks, but there have been several exceptions. These include an all-black strip with blue and gold trimmings between 1993 and 1995, the navy blue shirt with silver horizontal pinstripes worn during the 1999–2000 season, and the 2011–12 away kit, which had a royal blue body and sleeves with hoops made of small midnight navy blue and black stripes, with black shorts and blue socks. An all-grey away kit worn during the 1995–96 season was dropped after just five games, most notoriously against Southampton where Alex Ferguson forced the team to change into the third kit during half-time of its final outing. The reason for dropping it being that the players claimed to have trouble finding their teammates against the crowd, United failed to win a competitive game in the kit. In 2001, to celebrate 100 years as "Manchester United", a reversible white/gold away kit was released, although the actual match day shirts were not reversible.
+                        <br>
+                        <br>
+                        The club's third kit is often all-blue, this was most recently the case during the 2014–15 season. Exceptions include a green-and-gold halved shirt worn between 1992 and 1994, a blue-and-white striped shirt worn during the 1994–95 and 1995–96 seasons and once in 1996–97, an all-black kit worn during the Treble-winning 1998–99 season, and a white shirt with black-and-red horizontal pinstripes worn between 2003–04 and 2005–06. From 2006–07 to 2013–14, the third kit was the previous season's away kit, albeit updated with the new club sponsor in 2006–07 and 2010–11, apart from 2008–09 when an all-blue kit was launched to mark the 40th anniversary of the 1967–68 European Cup success.
+                    </p>
+                    
+            </div>
+                
+                <hr>
+                
+                <p id="kitsovertime"></p>
+                <br><br><br><br><br><br>
+            <div style="background-color: white; color:black; padding:40px 50px;">
+                    <h1 style="font-size: 50px;"> Kits Over Time </h1>
+                <img src="Images/MUKitsOverTime.jpg" alt="MUKitsOverTime"
+                     style="width:850px; height:auto;">
+            </div>
+        </div>
+            <h3 style="margin-left: 53%; font-size: 18px; color:white;"><b>Design by Nam Dao and Vignesh</b></h3>
+    </div>
+    
+    
+</body>
+</html>

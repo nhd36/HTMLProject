@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function scrollToHash(Origin)
+        {
+            location.hash = "#" + Origin;
+        }
+        
+        function scrollToHash(LogoDesign)
+        {
+            location.hash = "#" + LogoDesign;
+        }
+    </script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        @font-face {
+            src: url(Fonts/Prisma.ttf);
+            font-family: ManchesterUnited;
+        }
+        @font-face {
+            src: url(Fonts/GoodTime.ttf);
+            font-family: NamDaoGoodTime;
+        }
+        
+        @font-face {
+            src: url(Fonts/Roboto.ttf);
+            font-family: Roboto;
+        }
+        h1 {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            font-family: ManchesterUnited;
+            font-weight: 500;
+        }
+        
+        h2{
+            font-family: ManchesterUnited;
+            font-size: 22px;
+        }
+        
+        hr {
+            display: block;
+            border-width: 1px;
+            border-style: inset;
+        }
+        
+/* Grid Area */
+        .item1 {grid-area: horizontal;}
+        .item2 {grid-area: vertical;}
+        .item3 {grid-area: screen;}
+        .item4 {grid-area: bottom;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                'horizontal horizontal horizontal horizontal'
+                'vertical screen screen screen'
+                'vertical screen screen screen'
+                'vertical screen screen screen'
+                'bottom bottom bottom bottom'
+
+        }
+
+        .grid-container > div {
+            text-align: center;
+        }
+        
+/* Grid Area */
+        
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+        .nav {
+            background-color: white;
+            list-style-type: none;
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            margin: 0px;
+            width: 100%;
+            border: solid 1px black;
+            margin-right: -1px;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+
+        .nav li {
+            float: right;
+            margin-right: -1px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            font-family: NamDaoGoodTime;
+            padding: 33px 40px;
+            background-color: white;
+            font-size: 20px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.7s;
+            cursor: pointer;
+        }
+
+        .nav a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav a.active {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Horizontal Navigation Bar 1 */
+        
+/* Stylesheet for Vertical Navigation Bar */
+        
+        .nav1 {
+            background-color: white;
+            top: 108px;
+            padding: 0px;
+            list-style-type: none;
+            text-align: center;
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            left: 0px;
+            overflow: auto;
+            border: solid 1px black;
+            margin-left: -1px;
+        }
+
+        .nav1 li {
+            border: solid 1px black;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            font-size: 15px;
+            display: block;
+            padding: 30px 50px;
+            background-color: white;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+        
+        .nav1 a:hover {
+            background-color: black;
+            color: white;
+        }
+
+/* Stylesheet for Vertical Navigation Bar */
+        
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+        .nav2 {
+            background-color: white;
+            list-style-type: none;	
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            position: fixed;
+            top: 75px;
+            width: 100%;
+        }
+
+        .nav2 li {
+            float: left;
+            border: solid 1px black;
+            margin-top: -1px;
+            margin-right: -1px;
+            margin-left: -1px;
+  
+        }
+
+        .nav2 a {
+            text-decoration: none;
+            color: black;
+            font-family: NamDaoGoodTime;
+            display: block;
+            padding: 10px 290.5px;
+            background-color: white;
+            font-size: 15px;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+
+        .nav2 a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav2 a.active {
+            background-color: darkgrey;
+            color: black;
+        }
+/* Stylesheet for Horizontal Navigation Bar 2 */
+        
+    </style>
+</head>
+
+<body>
+        
+        <div>
+
+                                                <!-- Horizontal Navigation Bar -->
+            
+            <ul class="nav">
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
+                    <ul>          
+                        <li><h1 class="fontsize"> Manchester United </h1></li>           
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
+                        </li>    
+                    </ul>
+                </li>
+                <li><a class="active" href="AboutContribution.html">About</a></li>
+                <li><a href="RegistrationForm.html">Registration</a></li>
+                <li><a href="ProductsAbout.html">Products</a></li>
+                <li><a href="IntroductionOriginOfTheClub.html">Introduction</a></li>
+            </ul>
+            
+            <ul class="nav2">    
+                <li><a href="AboutContributions.html">Citations</a></li>
+                <li><a class="active" href="AboutPurpose">Purpose</a></li>
+            </ul>
+        </div> 
+                                                <!-- Horizontal Navigation Bar -->
+        
+        <div>
+            <div style=" padding: 120px 120px; height: auto;">
+                <div style="background-color: white; color:black; padding:40px 120px; margin-top: 80px; overflow: auto;">
+                    <h1 style="font-size: 50px;"> Purpose </h1>
+                    <p style="font-size:22px; font-family: Roboto; font-weight: 800;">
+                        Throughout the course INFO 151, I have learned a lot about HTML, CSS and Javascript. Although my interaction with Professor Andrew Kane is not much, he still created an opened environment for all of us to be able to connect and develop ourselves. Who knows, self learning is the best way to achieve success. I have been learning HTML, CSS and Javascript all by myself and I feel proud about that. Therefore, I want to build this website in order to appreciate all the effort that Professor Kane has put into this course. Since professor Kane is a fan of Manchester United, I made a Manchester United webpage for him. It would be more better if I can get a extra credits from this. If not, it is totally fine. Thank you for everything!
+                        <br><br><br>
+                        Best Regards,
+                        <br><br><br>
+                        Nam Dao and Vignesh
+                        <br>
+                        <br>
+                        <br>
+                        <div style="text-align: center;">
+                            <img src="Images/Thankyou1.gif" alt="Thank You Gif" width:500px; height:auto;>
+                        </div>
+                    </p>
+                </div>
+            </div>
+         
+            <h3 style="margin-left: 42%; font-size: 18px; color:white;"><b>Design by Nam Dao and Vignesh</b></h3>
+    
+    
+</body>
+</html>
