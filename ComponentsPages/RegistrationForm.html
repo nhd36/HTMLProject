@@ -11,17 +11,17 @@
             src: url(Fonts/Prisma.ttf);
             font-family: ManchesterUnited;
         }
-        
+
         @font-face {
             src: url(Fonts/GoodTime.ttf);
             font-family: NamDaoGoodTime;
         }
-        
+
         @font-face {
             src: url(Fonts/Roboto.ttf);
             font-family: Roboto;
         }
-        
+
         h1 {
             color: white;
             font-size: 30px;
@@ -30,12 +30,12 @@
             font-family: ManchesterUnited;
             font-weight: 500;
         }
-        
+
         h2{
             font-family: ManchesterUnited;
             font-size: 22px;
         }
-        
+
         hr {
             display: block;
             border-width: 1px;
@@ -44,7 +44,7 @@
             margin-bottom: 50px;
             width: 100%;
         }
-        
+
 /* Grid Area */
         .item1 {grid-area: horizontal;}
         .item2 {grid-area: vertical;}
@@ -52,7 +52,7 @@
 
         .grid-container {
             display: grid;
-            grid-template-areas: 
+            grid-template-areas:
                 'horizontal horizontal horizontal horizontal'
                 'vertical vertical vertical vertical'
                 'screen screen screen screen'
@@ -64,10 +64,10 @@
         .grid-container > div {
             text-align: center;
         }
-        
+
         .grid-container1 {
             display: grid;
-            grid-template-areas: 
+            grid-template-areas:
                 'horizontal vertical'
 
         }
@@ -75,9 +75,9 @@
         .grid-container1 > div {
             text-align: center;
         }
-        
+
 /* Stylesheet for Horizontal Navigation Bar 1 */
-        
+
         .nav {
             background-color: white;
             list-style-type: none;
@@ -103,7 +103,7 @@
             color: black;
             display: block;
             font-family: NamDaoGoodTime;
-            padding: 33px 40px;
+            padding: 33px 30px;
             background-color: white;
             font-size: 20px;
             -webkit-transition-duration: 0.4s;
@@ -115,16 +115,16 @@
             background-color: black;
             color: white;
         }
-        
+
         .nav a.active {
             background-color: black;
             color: white;
         }
 
 /* Stylesheet for Horizontal Navigation Bar 1 */
-        
+
 /* Stylesheet for Vertical Navigation Bar */
-        
+
         .nav1 {
             background-color: white;
             top: 108px;
@@ -159,19 +159,19 @@
             transition-duration: 1s;
             cursor: pointer;
         }
-        
+
         .nav1 a:hover {
             background-color: black;
             color: white;
         }
 
 /* Stylesheet for Vertical Navigation Bar */
-        
+
 /* Stylesheet for Horizontal Navigation Bar 2 */
-        
+
         .nav2 {
             background-color: white;
-            list-style-type: none;	
+            list-style-type: none;
             padding: 0px;
             text-align: center;
             overflow: hidden;
@@ -186,7 +186,7 @@
             margin-top: -1px;
             margin-right: -1px;
             margin-left: -1px;
-  
+
         }
 
         .nav2 a {
@@ -206,31 +206,31 @@
             background-color: black;
             color: white;
         }
-        
+
         .nav2 a.active {
             background-color: darkgrey;
             color: black;
         }
 /* Stylesheet for Horizontal Navigation Bar 2 */
-        
+
         input:focus {
             background-color: lightblue;
         }
-        
+
         .paragraph {
             font-size: 25px;
             font-family: Roboto;
         }
-        
+
         .center {
             text-align: center;
         }
-        
+
         button {
-            width:90%; 
-            font-family:ManchesterUnited; 
-            padding: 5px; 
-            font-size: 25px; 
+            width:90%;
+            font-family:ManchesterUnited;
+            padding: 5px;
+            font-size: 25px;
             background-color:white;
             border: none;
             -webkit-transition-duration: 0.4s;
@@ -238,17 +238,17 @@
             cursor: pointer;
             box-shadow: 0px 0px 10px 0px grey;
         }
-        
+
         button:hover {
             background-color: black;
             color: white;
         }
-        
+
         .buttoninput {
-            width:50%; 
-            font-family:ManchesterUnited; 
-            padding: 5px; 
-            font-size: 25px; 
+            width:50%;
+            font-family:ManchesterUnited;
+            padding: 5px;
+            font-size: 25px;
             background-color:white;
             border: none;
             -webkit-transition-duration: 0.4s;
@@ -256,18 +256,18 @@
             cursor: pointer;
             box-shadow: 0px 0px 10px 0px grey;
         }
-        
+
         .buttoninput:hover {
             background-color: black;
             color: white;
         }
-        
+
         iframe {
             border: 1px solid black;
             width: 100%;
         }
     </style>
-    
+
     <script>
         function NamDaoDepZai()
         {
@@ -278,7 +278,7 @@
             var Phone=document.getElementById('phone').value;
             var Email=document.getElementById('email').value;
             var Zipcode=document.getElementById('zipcode').value;
-            
+
                                 /* Sex */
             var items=document.getElementsByName('dao');
             var selectedItems="";
@@ -287,12 +287,12 @@
                     selectedItems+=items[i].value;
             }
                                 /* Sex */
-            
+
                                 /* Race */
             selectElement = document.querySelector('#NamDao');
             output = selectElement.value;
                                 /*Race*/
-                                
+
                                 /*Shopping Preferences*/
             var Items=document.getElementsByName('nam');
             var SelectedItems="";
@@ -302,7 +302,7 @@
                         SelectedItems+="\n" + "        " + Items[z].value;
                 }
                                 /*Shopping Preferences*/
-            
+
                                 /*Validates Phone Number*/
             if (Phone.length == 9)
                 {
@@ -311,12 +311,12 @@
                             "\nSex: " + selectedItems +
                             "\nRace: " + output +
                             "\nCountry: " + Country +
-                            "\nCity: " + City + 
+                            "\nCity: " + City +
                             "\nZip Code: " + Zipcode +
                             "\nPhone: " + Phone +
                             "\nEmail: " + Email +
                             "\nShopping Preferences: " + SelectedItems);
-                } else if 
+                } else if
                 (for (var x = 0; x < validatesallfields.length; x++)
                     {
                         if (validatesallfields[x] == "")
@@ -330,7 +330,7 @@
                     alert("Please input the correct phone numbers")
                 }
                                 /*Validates Phone Number*/
-            
+
                                                 /*Validates all fields*/
             var validatesallfields= [Firstname, Lastname, Country, City, Phone, City, Email, Zipcode];
             for ( var x = 0; x < validatesallfields.length; x++)
@@ -346,7 +346,7 @@
                                         "\nSex: " + selectedItems +
                                         "\nRace: " + output +
                                         "\nCountry: " + Country +
-                                        "\nCity: " + City + 
+                                        "\nCity: " + City +
                                         "\nZip Code: " + Zipcode +
                                         "\nPhone: " + Phone1 +
                                         "\nEmail: " + Email +
@@ -356,7 +356,7 @@
                 }
                                                 /*Validates all fields*/
         }
-        
+
         function NamDaoReset()
         {
             document.getElementById('NamDaoForm').reset();
@@ -366,18 +366,18 @@
 
 <body>
     <div clas = "grid-container">
-        
+
         <div class="item1">
 
                                                 <!-- Horizontal Navigation Bar -->
-            
+
             <ul class="nav">
-                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
-                    <ul>          
-                        <li><h1 class="fontsize"> Manchester United </h1></li>           
-                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
-                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
-                        </li>    
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">
+                    <ul>
+                        <li><h1 class="fontsize"> Manchester United </h1></li>
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">
+                        </li>
                     </ul>
                 </li>
                 <li><a href="AboutContributions.html">About</a></li>
@@ -385,21 +385,21 @@
                 <li><a href="ProductsAbout.html">Products</a></li>
                 <li><a href="IntroductionOriginOfTheClub.html">Introduction</a></li>
             </ul>
-            
-            <ul class="nav2">    
+
+            <ul class="nav2">
                 <li><a class="active" href="#">Registration Form</a></li>
             </ul>
 
                                                 <!-- Horizontal Navigation Bar -->
-            
-        </div> 
-        
+
+        </div>
+
         <div class="item3">
             <div style=" padding: 210px 120px;">
                 <div style="background-color: white; color:black; padding:40px 100px; overflow: auto;">
                     <h1 style="font-size: 50px; letter-spacing: 1.5px;"> Registration <br> Form </h1>
                     <hr>
-                    
+
                     <div style="background-color: black; color: white; padding:40px 200px; overflow: auto;">
                         <hr>
                         <form id="NamDaoForm">
@@ -518,7 +518,7 @@
                         <hr>
                         <br>
                         <br>
-                        
+
                         <div class="grid-container1">
                             <div class="item1">
                                 <button onclick="NamDaoDepZai()"><b>Submit</b></button>
@@ -534,12 +534,12 @@
                 </div>
                     <hr>
             </div>
-                
+
             </div>
         </div>
             <h3 style="margin-left: 42%; font-size: 18px; color:white;"><b>Design by Nam Dao and Vignesh</b></h3>
     </div>
-    
-    
+
+
 </body>
 </html>

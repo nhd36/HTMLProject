@@ -6,7 +6,7 @@
             margin: 0;
             background-color: black;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
@@ -15,17 +15,17 @@
             src: url(Fonts/Prisma.ttf);
             font-family: ManchesterUnited;
         }
-        
+
         @font-face {
             src: url(Fonts/GoodTime.ttf);
             font-family: NamDaoGoodTime;
         }
-        
+
         @font-face {
             src: url(Fonts/Roboto.ttf);
             font-family: Roboto;
         }
-        
+
         h1 {
             color: white;
             font-size: 30px;
@@ -34,25 +34,25 @@
             font-family: ManchesterUnited;
             font-weight: 500;
         }
-        
+
         h2{
             font-family: ManchesterUnited;
             font-size: 22px;
         }
-        
+
         p{
             font-family: Roboto;
             font-weight: 800;
             font-size: 5px;
         }
-        
+
         hr {
             display: block;
             border-width: 1px;
             border-style: inset;
             margin-top: 120px;
         }
-        
+
 /* Grid Area */
         .item1 {grid-area: horizontal;}
         .item2 {grid-area: vertical;}
@@ -61,7 +61,7 @@
 
         .grid-container {
             display: grid;
-            grid-template-areas: 
+            grid-template-areas:
                 'horizontal horizontal horizontal horizontal'
                 'vertical screen screen screen'
                 'vertical screen screen screen'
@@ -73,11 +73,11 @@
         .grid-container > div {
             text-align: center;
         }
-        
+
 /* Grid Area */
-        
+
 /* Stylesheet for Horizontal Navigation Bar 1 */
-        
+
         .nav {
             background-color: white;
             list-style-type: none;
@@ -103,7 +103,7 @@
             color: black;
             display: block;
             font-family: NamDaoGoodTime;
-            padding: 33px 40px;
+            padding: 33px 30px;
             background-color: white;
             font-size: 20px;
             -webkit-transition-duration: 0.4s;
@@ -115,16 +115,16 @@
             background-color: black;
             color: white;
         }
-        
+
         .nav a.active {
             background-color: black;
             color: white;
         }
 
 /* Stylesheet for Horizontal Navigation Bar 1 */
-        
+
 /* Stylesheet for Vertical Navigation Bar */
-        
+
         .nav1 {
             background-color: white;
             top: 108px;
@@ -159,26 +159,26 @@
             transition-duration: 1s;
             cursor: pointer;
         }
-        
+
         .nav1 a:hover {
             background-color: black;
             color: white;
         }
 
 /* Stylesheet for Vertical Navigation Bar */
-        
+
 /* Stylesheet for Horizontal Navigation Bar 2 */
-        
+
         .nav2 {
             background-color: white;
-            list-style-type: none;	
+            list-style-type: none;
             padding: 0px;
             text-align: center;
             overflow: hidden;
             position: fixed;
             top: 75px;
             width: 100%;
-          
+
         }
 
         .nav2 li {
@@ -187,7 +187,7 @@
             margin-top: -1px;
             margin-right: -1px;
             margin-left: -1px;
-  
+
         }
 
         .nav2 a {
@@ -195,7 +195,7 @@
             color: black;
             font-family: NamDaoGoodTime;
             display: block;
-            padding: 10px 148.3px;
+            padding: 10px 134px;
             background-color: white;
             font-size: 15px;
             -webkit-transition-duration: 0.4s;
@@ -207,22 +207,22 @@
             background-color: black;
             color: white;
         }
-        
+
         .nav2 a.active {
             background-color: darkgrey;
             color: black;
         }
-        
+
 /* Stylesheet for Horizontal Navigation Bar 2 */
-        
+
     </style>
-    
+
     <script>
         function scrollToHash(contacts)
         {
             location.hash = "#" + contacts;
         }
-        
+
         function scorllToHash(players)
         {
             location.hash = "#" + players;
@@ -232,30 +232,30 @@
 
 <body>
     <div clas = "grid-container">
-        
+
         <div class="item2">
-            
+
                                                 <!-- Vertical Navigation Bar -->
-            
+
             <ul class="nav1">
                 <li><a href="#contacts">Contacts</a></li>
                 <li><a href="#players">Players</a></li>
             </ul>
-            
+
                                                 <!-- Vertical Navigation Bar -->
         </div>
-        
+
         <div class="item1">
 
                                                 <!-- Horizontal Navigation Bar 1-->
-            
+
             <ul class="nav">
-                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
-                    <ul>          
-                        <li><h1 class="fontsize"> Manchester United </h1></li>           
-                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
-                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
-                        </li>    
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">
+                    <ul>
+                        <li><h1 class="fontsize"> Manchester United </h1></li>
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">
+                        </li>
                     </ul>
                 </li>
                 <li><a href="AboutContributions.html">About</a></li>
@@ -263,32 +263,32 @@
                 <li><a href="ProductsAbout.html">Products</a></li>
                 <li><a class="active" href="IntroductionOriginOfTheClub.html">Introduction</a></li>
             </ul>
-            
+
                                                 <!-- Horizontal Navigation Bar 1-->
-            
+
                                                 <!-- Horizontal Navigation Bar 2-->
-            
-            <ul class="nav2">    
+
+            <ul class="nav2">
                 <li><a href="IntroductionOriginOfTheClub.html">Origin of the club</a></li>
                 <li><a href="IntroductionSeasonKits.html">Season Kits</a></li>
                 <li><a class="active" href="IntroductionContributors.html">Contributors</a></li>
             </ul>
 
                                                 <!-- Horizontal Navigation Bar 2-->
-            
-        </div> 
-        
+
+        </div>
+
         <div class="item3">
             <div style="margin-left:20%; padding: 120px 60px; height: auto;">
-                
-                                                
+
+
                                                         <!--Contacts-->
                 <p id="contacts"></p>
                     <br><br><br><br><br><br>
                 <div style="background-color: white; color:black; padding:40px 50px;">
-                    
+
                     <h1 style="font-size: 50px; margin-top:15px;"> Contacts </h1>
-                    
+
                     <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:17px; margin-left: 20px;">
                             <img src="Images/AndrewKane.png" alt="MULogo"
@@ -306,7 +306,7 @@
                     </div>
                     <br>
                     <br>
-                    
+
                     <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:17px; margin-left: 20px;">
                             <img src="Images/NamDao.jpg" alt="MULogo"
@@ -324,7 +324,7 @@
                     </div>
                     <br>
                     <br>
-                    
+
                     <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:17px; margin-left: 20px;">
                             <img src="Images/Viggy.jpg" alt="MULogo"
@@ -361,10 +361,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/AaronWanBissaka.png" alt="MULogo"
@@ -378,10 +378,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/AndreasPereira.png" alt="MULogo"
@@ -395,10 +395,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/AngelGomes.jpg" alt="MULogo"
@@ -412,10 +412,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/AnthonyMartial.jpg" alt="MULogo"
@@ -429,10 +429,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/AshleyYoung.png" alt="MULogo"
@@ -446,10 +446,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/AxelTuanbeze.png" alt="MULogo"
@@ -463,10 +463,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/BradonWilliams.jpg" alt="MULogo"
@@ -480,10 +480,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/DanielJames.jpg" alt="MULogo"
@@ -497,10 +497,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/DiogoDalot.png" alt="MULogo"
@@ -514,10 +514,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/EricBaily.png" alt="MULogo"
@@ -531,10 +531,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/Fred.png" alt="MULogo"
@@ -548,10 +548,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/HarryMaguire.jpg" alt="MULogo"
@@ -565,10 +565,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/JesseLingard.png" alt="MULogo"
@@ -582,10 +582,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/JuanMata.png" alt="MULogo"
@@ -594,15 +594,15 @@
                             <br>
                             <u>Position:</u> Mid fielder.
                             <br>
-                            <u>Description:</u> a Spanish professional footballer who plays as a midfielder for Premier League club Manchester United and the Spain national team. He mostly plays as a central attacking midfielder, but he can also play on the wing. A graduate of Real Madrid's youth academy, Mata played for Real Madrid Castilla in 2006–07, before joining Valencia in the summer of 2007. He became an integral part of the club's midfield, making 174 appearances over the course of four seasons. In August 2011, Mata signed for English club Chelsea of the Premier League for a fee believed to be in the region of €28 million, and in his debut season was part of the team that won the UEFA Champions League and the FA Cup. 
+                            <u>Description:</u> a Spanish professional footballer who plays as a midfielder for Premier League club Manchester United and the Spain national team. He mostly plays as a central attacking midfielder, but he can also play on the wing. A graduate of Real Madrid's youth academy, Mata played for Real Madrid Castilla in 2006–07, before joining Valencia in the summer of 2007. He became an integral part of the club's midfield, making 174 appearances over the course of four seasons. In August 2011, Mata signed for English club Chelsea of the Premier League for a fee believed to be in the region of €28 million, and in his debut season was part of the team that won the UEFA Champions League and the FA Cup.
                             <br>
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/LeeGrant.jpg" alt="MULogo"
@@ -616,10 +616,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/LukeShaw.png" alt="MULogo"
@@ -633,10 +633,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/MarcosRojo.jpg" alt="MULogo"
@@ -650,10 +650,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: 20px;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/MarcusRashford.jpg" alt="MULogo"
@@ -667,10 +667,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/MasonGreenWood.jpeg" alt="MULogo"
@@ -684,10 +684,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/NemanjaMatic.png" alt="MULogo"
@@ -701,10 +701,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/PaulPogba.jpg" alt="MULogo"
@@ -718,10 +718,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/PhilJones.jpg" alt="MULogo"
@@ -735,10 +735,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/ScottMcTominay.png" alt="MULogo"
@@ -752,10 +752,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/SergioRomero.png" alt="MULogo"
@@ -769,10 +769,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/TimothyFosu.png" alt="MULogo"
@@ -786,10 +786,10 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
                 <div style="display:block; border: solid 1px black; overflow: auto;">
                         <p style="font-size:15px; margin-left: 20px;">
                             <img src="Images/MUPlayers/VictorLindelof.jpg" alt="MULogo"
@@ -803,16 +803,16 @@
                             <br>
                         </p>
                 </div>
-                
+
                 <br>
                 <br>
-                
+
             </div>
-        
+
         </div>
             <h3 style="margin-left: 53%; font-size: 18px; color:white;"><b>Design by Nam Dao and Vignesh</b></h3>
     </div>
-    
-    
+
+
 </body>
 </html>

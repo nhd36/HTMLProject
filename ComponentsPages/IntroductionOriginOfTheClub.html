@@ -6,18 +6,18 @@
         {
             location.hash = "#" + Origin;
         }
-        
+
         function scrollToHash(LogoDesign)
         {
             location.hash = "#" + LogoDesign;
         }
     </script>
-    
+
     <style>
         html{
             scroll-behavior: smooth;
         }
-        
+
         body {
             margin: 0;
             background-color: black;
@@ -31,7 +31,7 @@
             src: url(Fonts/GoodTime.ttf);
             font-family: NamDaoGoodTime;
         }
-        
+
         @font-face {
             src: url(Fonts/Roboto.ttf);
             font-family: Roboto;
@@ -44,18 +44,18 @@
             font-family: ManchesterUnited;
             font-weight: 500;
         }
-        
+
         h2{
             font-family: ManchesterUnited;
             font-size: 22px;
         }
-        
+
         hr {
             display: block;
             border-width: 1px;
             border-style: inset;
         }
-        
+
 /* Grid Area */
         .item1 {grid-area: horizontal;}
         .item2 {grid-area: vertical;}
@@ -64,7 +64,7 @@
 
         .grid-container {
             display: grid;
-            grid-template-areas: 
+            grid-template-areas:
                 'horizontal horizontal horizontal horizontal'
                 'vertical screen screen screen'
                 'vertical screen screen screen'
@@ -76,11 +76,11 @@
         .grid-container > div {
             text-align: center;
         }
-        
+
 /* Grid Area */
-        
+
 /* Stylesheet for Horizontal Navigation Bar 1 */
-        
+
         .nav {
             background-color: white;
             list-style-type: none;
@@ -106,7 +106,7 @@
             color: black;
             display: block;
             font-family: NamDaoGoodTime;
-            padding: 33px 40px;
+            padding: 33px 30px;
             background-color: white;
             font-size: 20px;
             -webkit-transition-duration: 0.4s;
@@ -118,16 +118,16 @@
             background-color: black;
             color: white;
         }
-        
+
         .nav a.active {
             background-color: black;
             color: white;
         }
 
 /* Stylesheet for Horizontal Navigation Bar 1 */
-        
+
 /* Stylesheet for Vertical Navigation Bar */
-        
+
         .nav1 {
             background-color: white;
             top: 108px;
@@ -162,19 +162,19 @@
             transition-duration: 1s;
             cursor: pointer;
         }
-        
+
         .nav1 a:hover {
             background-color: black;
             color: white;
         }
 
 /* Stylesheet for Vertical Navigation Bar */
-        
+
 /* Stylesheet for Horizontal Navigation Bar 2 */
-        
+
         .nav2 {
             background-color: white;
-            list-style-type: none;	
+            list-style-type: none;
             padding: 0px;
             text-align: center;
             overflow: hidden;
@@ -189,7 +189,7 @@
             margin-top: -1px;
             margin-right: -1px;
             margin-left: -1px;
-  
+
         }
 
         .nav2 a {
@@ -197,7 +197,7 @@
             color: black;
             font-family: NamDaoGoodTime;
             display: block;
-            padding: 10px 148.3px;
+            padding: 10px 130px;
             background-color: white;
             font-size: 15px;
             -webkit-transition-duration: 0.4s;
@@ -209,41 +209,41 @@
             background-color: black;
             color: white;
         }
-        
+
         .nav2 a.active {
             background-color: darkgrey;
             color: black;
         }
 /* Stylesheet for Horizontal Navigation Bar 2 */
-        
+
     </style>
 </head>
 
 <body>
-        
+
         <div>
-            
+
                                                 <!-- Vertical Navigation Bar -->
-            
+
             <ul class="nav1">
                 <li><a href="#Origin">Origin</a></li>
                 <li><a href="#LogoDesign">Logo Design</a></li>
             </ul>
-            
+
                                                 <!-- Vertical Navigation Bar -->
         </div>
-        
+
         <div>
 
                                                 <!-- Horizontal Navigation Bar -->
-            
+
             <ul class="nav">
-                <li style="float:left; margin-right: -1px; margin-left:-1px;">  
-                    <ul>          
-                        <li><h1 class="fontsize"> Manchester United </h1></li>           
-                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">             
-                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">        
-                        </li>    
+                <li style="float:left; margin-right: -1px; margin-left:-1px;">
+                    <ul>
+                        <li><h1 class="fontsize"> Manchester United </h1></li>
+                        <li style="list-style-type: none; margin-top: 8px; margin-right: 10px;">
+                            <img src="Images/MULogo2.jpg" alt="Manchester" width="70"; height="70">
+                        </li>
                     </ul>
                 </li>
                 <li><a href="AboutContributions.html">About</a></li>
@@ -251,15 +251,15 @@
                 <li><a href="ProductsAbout.html">Products</a></li>
                 <li><a class="active" href="IntroductionOriginOfTheClub.html">Introduction</a></li>
             </ul>
-            
-            <ul class="nav2">    
+
+            <ul class="nav2">
                 <li><a class="active" href="IntroductionOriginOfTheClub.html">Origin of the club</a></li>
                 <li><a href="IntroductionSeasonKits.html">Season Kits</a></li>
                 <li><a href="IntroductionContributors.html">Contributors</a></li>
             </ul>
-        </div> 
+        </div>
                                                 <!-- Horizontal Navigation Bar -->
-        
+
         <div>
             <div style="margin-left:20%; padding: 120px 60px; height: auto;">
                 <p id="Origin"></p>
@@ -269,7 +269,7 @@
                     <p style="font-size:22px; font-family: Roboto;">
                         <img src="Images/MULogo5.png" alt="MULogo"
                              style="float:right; width:400px; height:400px;">
-                        
+
                         Manchester United Football Club is a professional football club based in Old Trafford, Greater Manchester, England, that competes in the Premier League, the top flight of English football. Nicknamed "the Red Devils", the club was founded as Newton Heath LYR Football Club in 1878, changed its name to Manchester United in 1902 and moved to its current stadium, Old Trafford, in 1910.
                         <br>
                         <br>
@@ -364,7 +364,7 @@
                 <br><br><br><br><br>
                 <hr>
                 <br><br><br><br><br>
-                
+
                 <div style="background-color: white; color:black; padding:40px 50px;">
                     <h1 style="font-size: 50px;"> Value </h1>
                     <p style="font-size:22px; font-family: Roboto;">
@@ -375,12 +375,12 @@
                              style="text-align:center; width:870px; height:550px;">
                     </p>
             </div>
-                
+
         </div>
-            
-       </div>     
+
+       </div>
             <h3 style="margin-left: 53%; font-size: 18px; color:white;"><b>Design by Nam Dao and Vignesh</b></h3>
-    
-    
+
+
 </body>
 </html>
